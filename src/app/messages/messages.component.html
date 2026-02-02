@@ -1,0 +1,15 @@
+@if (errors$ | async; as errors) {
+  @if (showMessages) {
+    <div class="messages-container">
+      @for (error of errors; track error) {
+        <div class="message">{{ error }}</div>
+      }
+      <mat-icon
+        (click)="onClose()"
+        class="close"
+      >
+        close
+      </mat-icon>
+    </div>
+  }
+}

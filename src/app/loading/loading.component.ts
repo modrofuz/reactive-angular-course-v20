@@ -1,22 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import {Observable} from 'rxjs';
+import { Component, inject, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { LoadingService } from '../services/loading.service';
 
 @Component({
-    selector: 'loading',
-    templateUrl: './loading.component.html',
-    styleUrls: ['./loading.component.css'],
-    standalone: false
+  selector: 'loading',
+  templateUrl: './loading.component.html',
+  styleUrls: ['./loading.component.css'],
+  standalone: false,
 })
 export class LoadingComponent implements OnInit {
+  readonly loadingService: LoadingService = inject<LoadingService>(LoadingService);
 
-
-  constructor() {
-
-  }
-
-  ngOnInit() {
-
-  }
-
-
+  ngOnInit() {}
 }

@@ -107,7 +107,12 @@
     }
   },
   "schematics": {
+    "@schematics/angular:service": {
+      "project": "reactive-angular-course",
+      "type": "service"
+    },
     "@schematics/angular:component": {
+      "project": "reactive-angular-course",
       "style": "scss",
       "type": "component"
     },
@@ -115,9 +120,7 @@
       "prefix": "",
       "type": "directive"
     },
-    "@schematics/angular:service": {
-      "type": "service"
-    },
+
     "@schematics/angular:guard": {
       "typeSeparator": "."
     },
